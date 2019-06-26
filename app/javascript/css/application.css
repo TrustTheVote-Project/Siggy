@@ -1,0 +1,123 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+h2,h3,h4,h5,h6 {
+  @apply mt-4 mb-2 font-bold;
+}
+h2 {
+  @apply text-2xl
+}
+h3 {
+  @apply text-xl
+}
+h4 {
+  @apply text-lg
+}
+
+a {
+  @apply text-blue-700;
+}
+
+.btn {
+  display: inline-block;
+  @apply rounded mx-auto my-2 py-2 px-10 bg-blue-700 text-white text-center w-auto;
+  &:hover {
+    @apply bg-blue-900;
+  }
+}
+
+.siggy-border {
+  @apply border border-solid border-gray-500;
+}
+
+label {
+  display: block;
+  @apply .mb-2 .mt-4;
+}
+.dob {
+  @apply p-1; 
+  label {
+    @apply .mb-1 .mt-0 .p-0;
+  }
+}
+
+label, input[type=text], input[type=email], input[type=password],
+input[type=phone], select, textarea {
+  @apply w-full p-1;
+  @screen md {
+    @apply w-auto;
+  }
+}
+input[size] {
+  @apply w-auto;
+}
+input[type=text], input[type=email], input[type=password],
+input[type=phone],
+select, textarea {
+  @apply bg-blue-200;
+  @apply siggy-border;
+}
+
+input[type=file] {
+  @apply siggy-border;
+}
+input[type=submit] {
+  @apply btn;
+}
+
+
+#signature_image_preview {
+  display: none;
+  @apply w-full h-auto mx-auto my-2;
+}
+
+header {
+  @apply flex p-2 bg-blue-700 text-white mb-2;
+  h1 {
+    @apply w-1/3 m-0 p-0 font-bold;
+    a {
+      @apply text-white;
+    }
+  }
+  nav {
+    @apply w-2/3;
+    ul {
+      @apply flex justify-end;
+      li a {
+        @apply text-white
+      }
+    }
+  }  
+}
+
+
+.printable-signature-submission {
+  @apply border border-black border-l-0 border-b-0;
+  .field-group {
+    @apply w-full flex justify-start border-black border-b;
+    &.signature {
+      .field {
+        @apply p-6;
+        img {
+          @apply w-full;
+        }
+      }
+    }
+    .field {
+      @apply border-black border-solid border-l;
+      .label, .value {
+        @apply p-1;
+        height: 50%;
+      }
+      .label {
+        @apply w-full;
+        
+      }
+      .value {
+        @apply w-full;
+        @apply bg-blue-100;
+      }
+    }
+  }
+}

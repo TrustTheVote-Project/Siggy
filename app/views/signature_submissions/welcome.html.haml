@@ -1,0 +1,10 @@
+%h2= I18n.t('signatures.welcome.title')
+= I18n.t('signatures.welcome.body').html_safe
+
+= link_to I18n.t("signatures.welcome.start"), new_signature_submission_path
+
+.m-24
+.my-2
+  = link_to "LEO Log In", leo_path
+.my-2
+  = link_to "Admin Log In", admin_path

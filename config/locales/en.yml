@@ -1,0 +1,142 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  faker:
+    address:
+      county: [
+          "Adams",
+          "Ashland",
+          "Barron",
+          "Bayfield",
+          "Brown",
+          "Buffalo",
+          "Burnett",
+          "Calumet",
+          "Chippewa",
+          "Clark",
+          "Columbia",
+          "Crawford",
+          "Dane",
+          "Dodge",
+          "Door",
+          "Douglas",
+          "Dunn",
+          "Eau Claire",
+          "Florence",
+          "Fond Du Lac",
+          "Forest",
+          "Grant",
+          "Green",
+          "Green Lake",
+          "Iowa",
+          "Iron",
+          "Jackson",
+          "Jefferson",
+          "Juneau",
+          "Kenosha",
+          "Kewaunee",
+          "La Crosse",
+          "Lafayette",
+          "Langlade",
+          "Lincoln",
+          "Manitowoc",
+          "Marathon",
+          "Marinette",
+          "Marquette",
+          "Menominee",
+          "Milwaukee",
+          "Monroe",
+          "Oconto",
+          "Oneida",
+          "Outagamie",
+          "Ozaukee",
+          "Pepin",
+          "Pierce",
+          "Polk",
+          "Portage",
+          "Price",
+          "Racine",
+          "Richland",
+          "Rock",
+          "Rusk",
+          "St. Croix",
+          "Sauk",
+          "Sawyer",
+          "Shawano",
+          "Sheboygan",
+          "Taylor",
+          "Trempealeau",
+          "Vernon",
+          "Vilas",
+          "Walworth",
+          "Washburn",
+          "Washington",
+          "Waukesha",
+          "Waupaca",
+          "Waushara",
+          "Winnebago",
+          "Wood"
+      ]
+
+  leos:
+    greeting: Hi, %{name}
+    county: LEO for %{county} county
+    intro: <p>Intro text TBD</p>
+    upload: Upload Voter List
+    upload_intro: <p>TBD Upload intro text</p>
+    upload_button: Submit
+    upload_success: Successfully uploaded voter records
+    stats: Signature Statistics
+    ballot_count: 'Absentee Ballots: <span class="count">%{count}<span>'
+    notification_count: 'Notifications Sent: <span class="count">%{count}<span>'
+    submission_count: 'Signatures Submitted: <span class="count">%{count}<span>'
+    submission_accepted_count: 'Signatures Accepted: <span class="count">%{count}<span>'
+    submission_pending_count: 'Signatures Pending Review: <span class="count">%{count}<span>'
+    submission_rejected_count: 'Signatures Rejected: <span class="count">%{count}<span>'
+    view_all: View List
+  signatures:
+    approved: Signature Approved and confirmation sent to %{name}
+    rejected: Signature Rejected and notice sent to %{name}
+    welcome:
+      title: Welcome
+      body: <p>Demo app to submit a signature to fix voter registration</p>
+      start: Start Submission
+    list:
+      title: "%{type} Signature Submissions for %{county} county."
+      review: Review
+  simple_form:
+    labels:
+      signature_submission:
+        dob_month: Month
+        dob_day: Day
+        dob_year: Year
+    

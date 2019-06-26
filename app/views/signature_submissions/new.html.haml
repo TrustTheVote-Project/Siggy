@@ -1,0 +1,32 @@
+%h2 Update Your Signature
+%p Enter your information to match your registration and upload a new signature file
+= simple_form_for @signature_submission do |f|
+  .md:flex.justify-between
+    .block
+      = f.input :first_name
+    .block
+      = f.input :middle_name
+    .block
+      = f.input :last_name
+  = f.input :address
+  .md:flex.justify-between
+    .block
+      = f.input :city
+    .block
+      = f.input :state, collection: I18n.t('faker.address.state_abbr')
+    .block
+      = f.input :zip
+  %label Date Of Birth
+  .flex.dob
+    .dob-month{class: 'w-1/4'}
+      = f.input :dob_month, input_html: {maxlength: 2, size: 2}
+    .dob-day{class: 'w-1/4'}
+      = f.input :dob_day, input_html: {maxlength: 2, size: 2}
+    .dob-year{class: 'w-1/2'}
+      = f.input :dob_year, input_html: {maxlength: 4, size: 4}
+  = f.input :county, collection: I18n.t('faker.address.county')
+
+  = f.input :signature_image, as: :file
+  %img#signature_image_preview
+
+  = f.button :submit

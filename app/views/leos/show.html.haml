@@ -1,0 +1,28 @@
+%h2
+  = I18n.t('leos.greeting', name: current_leo.name)
+%h3
+  = I18n.t('leos.county', county: current_leo.county)
+
+= I18n.t('leos.intro').html_safe
+
+%h3= I18n.t('leos.upload')
+%section.upload
+  = I18n.t('leos.upload_intro').html_safe  
+  = file_field_tag "Voter List"
+  = link_to I18n.t('leos.upload_button'), upload_voters_leo_path, class: :btn
+%h3= I18n.t('leos.stats')
+
+%section.stats
+  %ul
+    %li= I18n.t('leos.ballot_count', count: 2042).html_safe
+    %li= I18n.t('leos.notification_count', count: 2042).html_safe
+    %li
+      = I18n.t('leos.submission_count', count: @signature_submissions.count).html_safe
+      = link_to I18n.t('leos.view_all'), signature_submissions_path
+    %li
+      = I18n.t('leos.submission_accepted_count', count: @signature_submissions.accepted.count).html_safe
+    %li
+      = I18n.t('leos.submission_pending_count', count: @signature_submissions.pending.count).html_safe
+      = link_to I18n.t('leos.view_all'), pending_signature_submissions_path
+    %li
+      = I18n.t('leos.submission_rejected_count', count: @signature_submissions.rejected.count).html_safe

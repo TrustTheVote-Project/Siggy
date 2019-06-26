@@ -1,0 +1,63 @@
+%h2
+
+.flex.justify-center.align-center
+  %div{class: "w-2/4"}
+    = link_to "Back", :back
+  - if @s.status == SignatureSubmission::Status.pending
+    %div{class: "w-1/4"}
+      = link_to "Approve", approve_signature_submission_path(@s), class: :btn
+    %div{class: "w-1/4"}
+      = link_to "Reject", reject_signature_submission_path(@s), class: :btn
+  - else
+    %div{class: "w-2/4"}
+      %h3= @s.status.titleize
+  
+.printable-signature-submission
+  .field-group
+    .field{class: 'w-4/12'}
+      .label First Name
+      .value= @s.first_name
+    .field{class: 'w-4/12'}
+      .label Last Name
+      .value= @s.last_name
+    .field{class: 'w-3/12'}
+      .label Middle Name(s)
+      .value= @s.middle_name
+    .field{class: 'w-1/12'}
+      .label Suffix
+      .value= @s.suffix
+  .field-group
+    .field{class: 'w-2/5'}
+      .label Home Address
+      .value= @s.address
+    .field{class: 'w-1/5'}
+      .label City
+      .value= @s.city
+    .field{class: 'w-1/5'}
+      .label State
+      .value= @s.state
+    .field{class: 'w-1/5'}
+      .label Zip Code
+      .value= @s.zip
+  .field-group
+    .field{class: 'w-1/3'}
+      .label Date of Birth
+      .value.mb-8
+        .flex.ml-4.border-b.border-black
+          .w-16.pr-2.text-center= @s.dob_month
+          .w-16.pr-2.text-center= @s.dob_day
+          .w-32.text-center= @s.dob_year
+        .flex.ml-4
+          .w-16.pr-2.text-center Month
+          .w-16.pr-2.text-center Day
+          .w-32.text-center Year
+        
+    .field{class: 'w-1/3'}
+      .label Telephone Number
+      .value= @s.phone
+    .field{class: 'w-1/3'}
+      .label ID Number
+      .value= @s.id_number
+  .field-group.signature
+    .field
+      %img{src: @s.signature_image}

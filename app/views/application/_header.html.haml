@@ -1,0 +1,8 @@
+%header
+  %h1 
+    =link_to "Siggy", "/"
+  - if current_leo
+    %nav
+      %ul
+        %li
+          = link_to "Sign Out", destroy_leo_session_path, {method: :delete}

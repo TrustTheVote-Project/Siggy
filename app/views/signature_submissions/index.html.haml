@@ -1,0 +1,15 @@
+%h2= I18n.t('signatures.list.title', county: current_leo.county, type: @type.titleize)
+
+%table.w-full.siggy-border
+  %thead
+    %tr
+      %th.siggy-border.text-left Name
+      %th.siggy-border.text-left Status
+      %th.siggy-border.text-left
+  - @signature_submissions.each do |s|
+    %tr
+      %td.siggy-border.p-1= s.name
+      %td.siggy-border.p-1= s.status.titleize
+      %td.siggy-border.p-1
+        - if s.status != SignatureSubmission::Status.accepted
+          = link_to I18n.t('signatures.list.review'), signature_submission_path(s) 
