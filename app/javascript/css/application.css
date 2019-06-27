@@ -35,12 +35,7 @@ label {
   display: block;
   @apply .mb-2 .mt-4;
 }
-.dob {
-  @apply p-1; 
-  label {
-    @apply .mb-1 .mt-0 .p-0;
-  }
-}
+
 
 label, input[type=text], input[type=email], input[type=password],
 input[type=phone], select, textarea {
@@ -66,6 +61,15 @@ input[type=submit] {
   @apply btn;
 }
 
+.dob {
+  @apply p-1; 
+  label {
+    @apply .mb-1 .mt-0 .p-0;
+  }
+  input {
+    @apply px-4;
+  }
+}
 
 #signature_image_preview {
   display: none;

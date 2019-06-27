@@ -123,6 +123,23 @@ en:
     submission_pending_count: 'Signatures Pending Review: <span class="count">%{count}<span>'
     submission_rejected_count: 'Signatures Rejected: <span class="count">%{count}<span>'
     view_all: View List
+  admins:
+    greeting: Hi, %{name}
+    intro: <p>Admin Intro text TBD</p>
+    stats: LEO Statistics
+    county_count: '<span class="count">%{count}<span> Counties'
+    user_count: '<span class="count">%{count}<span> Users'
+    login_count: '<span class="count">%{count}<span> logins in the last 30 days'
+  counties:
+    list:
+      title: County List
+    new:
+      title: Add New County
+      intro: <p>TBD No-Op text for adding a new county</p>
+  users:
+    new:
+      title: Add New County
+      intro: <p>TBD No-Op text for adding a new county</p>
   signatures:
     approved: Signature Approved and confirmation sent to %{name}
     rejected: Signature Rejected and notice sent to %{name}

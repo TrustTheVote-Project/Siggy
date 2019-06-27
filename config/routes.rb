@@ -19,6 +19,12 @@ Rails.application.routes.draw do
       get :upload_voters
     end
   end
-  resource :admin
+  resource :admin do
+    collection do
+      get :counties
+      get :new_county
+      get :new_user
+    end
+  end
 
 end

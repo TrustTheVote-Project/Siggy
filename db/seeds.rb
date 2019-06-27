@@ -14,6 +14,11 @@ Leo.create({
   county: county
 })
 
+Admin.create({
+  email: "fiona.amber@siggy.trustthevote.org",
+  password: "Tangerine Wardrobe Nineteen Forklift Hiker"
+})
+
 signatures = [
   Base64.strict_encode64(Rails.application.assets['signature1.jpg'].to_s),
   Base64.strict_encode64(Rails.application.assets['signature2.jpg'].to_s),

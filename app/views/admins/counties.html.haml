@@ -1,0 +1,14 @@
+%h2= I18n.t('counties.list.title')
+
+%table.w-full.siggy-border
+  %thead
+    %tr
+      %th.siggy-border.text-left County
+      %th.siggy-border.text-left User Count
+      %th.siggy-border.text-left
+  - @counties.each do |s|
+    %tr
+      %td.siggy-border.p-1= s
+      %td.siggy-border.p-1= s.length
+      %td.siggy-border.p-1
+        = link_to I18n.t('leos.view_all'), '#'
