@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Deployment Notes
+
+see .ebextensions for permissions set up
+eb setenv NODE_ENV=production 
+eb setenv RAILS_MASTER_KEY=XXX
