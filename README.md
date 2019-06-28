@@ -28,3 +28,4 @@ Things you may want to cover:
 see .ebextensions for permissions set up
 eb setenv NODE_ENV=production 
 eb setenv RAILS_MASTER_KEY=XXX
+eb setenv RAILS_SERVE_STATIC_FILES=true 
