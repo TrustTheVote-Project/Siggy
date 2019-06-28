@@ -6,3 +6,8 @@
       %ul
         %li
           = link_to "Sign Out", destroy_leo_session_path, {method: :delete}
+  - if current_admin
+    %nav
+      %ul
+        %li
+          = link_to "Sign Out", destroy_admin_session_path, {method: :delete}
