@@ -15,7 +15,7 @@ Leo.create({
 })
 
 Admin.create({
-  email: "fiona.amber@siggy.trustthevote.org",
+  email: "fiona.amber@serif.trustthevote.org",
   password: "Tangerine Wardrobe Nineteen Forklift Hiker"
 })
 

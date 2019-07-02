@@ -1,6 +1,6 @@
 <h2><%= I18n.t('admin_signin.title') %> <%= tooltip("admin_signin.title_tooltip").html_safe%></h2>
 
-<%- resource.email = "fiona.amber@siggy.trustthevote.org" if resource.email.blank? %>
+<%- resource.email = "fiona.amber@serif.trustthevote.org" if resource.email.blank? %>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
