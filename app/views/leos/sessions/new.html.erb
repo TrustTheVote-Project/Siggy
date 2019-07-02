@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<h2><%= I18n.t('leo_signin.title') %> <%= tooltip("leo_signin.title_tooltip").html_safe%></h2>
 
 <%- resource.email = "jane.bloom@elections.adamscounty.gov" if resource.email.blank? %>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

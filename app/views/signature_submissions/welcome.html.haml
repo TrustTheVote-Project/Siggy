@@ -5,6 +5,6 @@
 
 .m-24
 .my-2
-  = link_to "LEO Dashboard", current_leo ? leo_path : new_leo_session_path
+  = link_to I18n.t("signatures.welcome.leo_dashboard"), current_leo ? leo_path : new_leo_session_path
 .my-2
-  = link_to "Admin Dashboard", current_admin ? admin_path : new_admin_session_path
+  = link_to I18n.t("signatures.welcome.admin_dashboard"), current_admin ? admin_path : new_admin_session_path

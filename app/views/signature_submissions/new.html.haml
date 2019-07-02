@@ -1,5 +1,13 @@
-%h2 Update Your Signature
-%p Enter your information to match your registration and upload a new signature file
+%h2
+  = I18n.t('submit.title')
+  = tooltip('submit.title_tooltip')
+
+%p 
+  = I18n.t('submit.intro').html_safe
+  = tooltip('submit.intro_tooltip');
+  
+= more('submit.intro_more');
+
 = simple_form_for @signature_submission do |f|
   .md:flex.justify-between
     .block

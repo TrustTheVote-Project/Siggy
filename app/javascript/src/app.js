@@ -17,14 +17,34 @@ const showPreview = (url) => {
   e.setAttribute("src", url);
 }
 
-document.addEventListener("DOMContentLoaded", ()=> {
-  console.log('hi');
-  const input = document.getElementById("signature_submission_signature_image");
-  console.log(input);
-  input.addEventListener("change", (event) => {
-    readURL(event.target, (dataUrl) => {
-      showPreview(dataUrl);
-    });
-  })
+const setupTooltips = () => {
+  let icons = document.querySelectorAll("[data-tooltip-key]");
+  for(let icon of icons) {
+    let tooltipId = icon.attributes['data-tooltip-key'].value;
+    let tooltipElement = document.querySelector("[data-tooltip-id='"+tooltipId+"']");
+    let close = tooltipElement.querySelector(".close");
+    console.log(icon);
+    icon.addEventListener("click", function(element) {
+      //console.log("CLICK", element)
+      element.style.display = "block";
+    }.bind(this, tooltipElement))
+    close.addEventListener("click", function(element) {
+      element.style.display = "none";
+    }.bind(this, tooltipElement))
+  }
+}
 
+document.addEventListener("DOMContentLoaded", ()=> {
+  const input = document.getElementById("signature_submission_signature_image");
+  if (input) {
+    input.addEventListener("change", (event) => {
+      readURL(event.target, (dataUrl) => {
+        showPreview(dataUrl);
+      });
+    })  
+  }
+  
+  setupTooltips();
+  
 })
+

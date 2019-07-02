@@ -106,16 +106,25 @@ en:
           "Winnebago",
           "Wood"
       ]
-
+  submit:
+    title: Update Your Signature
+    title_tooltip: This is only a demo system.  You can enter any personal information, and select from a list of fictional counties.  Any information is acceptable for demonstration purposes. No data will be retained for any reason.
+    intro: As a voter, you can respond here to a notice or message from your local election official that there was a mismatch between your signature on file, and the signature on the return envelope for your ballot.  That’s important, because your ballot cannot be counted unless a new signature is provided that matches the signature on the envelope.
+    intro_tooltip: For demonstration purposes, we’ve provided this Serif Voter web interface, but many Serif users will find the free mobile App to be more convenient for camera use, and for receiving messages from their local election official (“LEO”) about the progress of their signature update request and their ballot being counted.
+    intro_more: <p>Instead of visiting your election office in person, you can respond here to provide your Signature Update Request in two parts.</p><p>1.	Provide the personal identification information that will allow your elections office to match you to a registered voter record.  Signature Update Requests are acceptable only if they match an existing record.</p><p>2.	Include your new signature by uploading a file that’s a digital photo of a recent hand signature with pen on paper — or if you are using a mobile device with a camera, tap “New Photo” as soon as you’ve written your signature on paper. </p>
+  leo_signin:
+    title: Serif — Election Officials’ Sign-in 
+    title_tooltip: "For purposes of the Serif demo tour, you can sign in as a pretend election official, jane.bloom@elections.adamscounty.gov with a password of: voteathome"
   leos:
+    title: Serif — Election Official Console
     greeting: Hi, %{name}
-    county: LEO for %{county} county
+    county: As a local election official for %{county} County, you can access the Signature Update Requests sent by Serif from voters in your county, responding to a notice by your office of a signature mismatch between the current signature on file, and the signature on their ballot return envelope. 
     intro: <p>Intro text TBD</p>
     upload: Upload Voter List
-    upload_intro: <p>TBD Upload intro text</p>
+    upload_intro: "<p>You can also upload a voter list of voters with a signature mismatch, so that Serif can notify the signee electronically.  More: <a href='#'>Information on File Format</a></p>"
     upload_button: Submit
     upload_success: Successfully uploaded voter records
-    stats: Signature Statistics
+    stats: Statistics on Voter Signature Updates
     ballot_count: 'Absentee Ballots: <span class="count">%{count}<span>'
     notification_count: 'Notifications Sent: <span class="count">%{count}<span>'
     submission_count: 'Signatures Submitted: <span class="count">%{count}<span>'
@@ -123,10 +132,14 @@ en:
     submission_pending_count: 'Signatures Pending Review: <span class="count">%{count}<span>'
     submission_rejected_count: 'Signatures Rejected: <span class="count">%{count}<span>'
     view_all: View List
+  admin_signin:
+    title: Serif — Administrator Console
+    title_tooltip: "For purposes of the Serif demo tour, you can sign in as a pretend administrator, fiona.amber@serif.trustthevote.org with a password of the exact text string (without quotes): “Tangerine Wardrobe Nineteen Forklift Hiker”"
   admins:
+    title_tooltip: For purposes of the Serif demo tour, you can see a partial view of the role of a Serif system administrator, mainly involved in responding to the requests of counties and other local election jurisdictions to use Serif, and requests from participating counties to add a user account.
     greeting: Hi, %{name}
-    intro: <p>Admin Intro text TBD</p>
-    stats: LEO Statistics
+    intro: <p>Your main duties as a Serif Administrator are user management, with the addition of some statistics on usage.</p>
+    stats: Serif Usage Statistics
     county_count: '<span class="count">%{count}<span> Counties'
     user_count: '<span class="count">%{count}<span> Users'
     login_count: '<span class="count">%{count}<span> logins in the last 30 days'
@@ -144,9 +157,11 @@ en:
     approved: Signature Approved and confirmation sent to %{name}
     rejected: Signature Rejected and notice sent to %{name}
     welcome:
-      title: Welcome
-      body: <p>Demo app to submit a signature to fix voter registration</p>
-      start: Start Submission
+      title: Serif
+      body: "<p>Welcome to the demonstration system for Serif, a signature verification mobile App and service for voters who vote absentee, by mail, or from home.</p><h3>About Serif</h3><p>Serif provides a convenient way for voters to fix a critical problem that can prevent their ballot from being counted: their voter signature on file did not match the signature on the return envelope of their ballot.</p><p>Usually, a voter would have to visit their local election office in order to identify him or herself and provide a current signature to match-verify the envelope’s signature.</p><p>With the Serif mobile App (or at Serif’s web site), voters can provide the same identifying information, and use their mobile phone camera to capture an image of fresh pen-on-paper signature. The information and signature are digitally submitted to Serif’s digital repository. Serif notifies the appropriation election officials, who can access the repository to get the voter’s updated signature and, if the new signature matches, approve to the voter’s ballot to be counted.</p><h3>Tour the Serif Demo</h3><p>To see Serif in action, you can try out the 3 different faces of the Serif system. Start with “Submit a New Signature” which will take to you a web page that has the same basic functions as the Serif mobile app, but is designed for a more convenient demonstration. Click on the <span class=\"fa fa-info-circle\"></span> icon to reveal demo explanations that would not be part of a real Serif system in operation.</p><p>Next, try “LEO Dashboard” which is the web interface for local election officials (LEO) who manage the signature update process. When a voter uses Serif to submit a signature update request, Serif notifies the voter’s LEO, who then logs into the LEO Dashboard to view these requests and accept or reject them. Lastly, try “Admin Dashboard” which is the web interface for the administrators of a Serif system, who create Serif LEO accounts so that one or more LEOs in the county or locality can access the LEO Dashboard. As before, click on the <span class=\"fa fa-info-circle\"></span> icon to reveal demo explanations that would not be part of a real Serif system in operation.</p>"
+      start: Submit a New Signature
+      leo_dashboard: LEO Dashboard
+      admin_dashboard: Admin Dashboard
     list:
       title: "%{type} Signature Submissions for %{county} county."
       review: Review

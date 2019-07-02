@@ -1,9 +1,18 @@
 %h2
-  = I18n.t('leos.greeting', name: current_leo.name)
+  = I18n.t('leos.title') 
+  
 %h3
+  = I18n.t('leos.greeting', name: current_leo.name)
+  
+%p
   = I18n.t('leos.county', county: current_leo.county)
 
-= I18n.t('leos.intro').html_safe
+%h3 View Pending Requests
+
+%p You can view pending requests to examine each, which contain the same identifying information that in-person signature updates require, as well as a digital image of a fresh by-hand wet ink signature.  From there, you can process the request per your normal procedure for an in-person visit.  More information is available under “Statistics” below.
+
+= link_to "View Requests", pending_signature_submissions_path
+
 
 %h3= I18n.t('leos.upload')
 %section.upload

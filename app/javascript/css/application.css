@@ -19,11 +19,47 @@ a {
   @apply text-blue-700;
 }
 
+p {
+  @apply my-2;
+}
+
 .btn {
   display: inline-block;
   @apply rounded mx-auto my-2 py-2 px-10 bg-blue-700 text-white text-center w-auto;
   &:hover {
     @apply bg-blue-900;
+  }
+}
+
+.fa {
+  @apply text-base;
+  cursor: pointer;
+}
+
+.close, .more-link {
+  cursor: pointer;
+}
+
+.more-link, .close-link {
+  @apply text-blue-700;
+}
+
+.more {
+  display: none;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: 20px;
+  right: 20px;
+  background: white;
+  @apply rounded border text-base p-2 pt-4 shadow font-normal;
+  .close {
+    position: absolute;
+    top: .25rem;
+    right: .5rem;
   }
 }
 
